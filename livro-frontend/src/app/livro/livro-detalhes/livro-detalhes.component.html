@@ -1,0 +1,10 @@
+<div *ngIf="livro">
+  <h2>{{ livro.titulo }}</h2>
+  <p>Data de Publição: {{ livro.dataPublicado }}</p>
+  <p>Título: {{ livro.titulo }}</p>
+  <button (click)="editarlivro()">Editar</button>
+</div>
+
+<div *ngIf="!livro">
+  <p>Nenhum livro selecionado.</p>
+</div>

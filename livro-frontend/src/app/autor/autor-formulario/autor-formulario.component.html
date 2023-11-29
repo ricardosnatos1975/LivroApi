@@ -1,0 +1,29 @@
+<div class="autor-form">
+    <h2>Formulário de Autor</h2>
+    
+    <form (ngSubmit)="submitForm()">
+      <!-- Nome do Autor -->
+      <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" [(ngModel)]="autor.nome" required>
+      </div>
+  
+      <!-- Biografia -->
+      <div class="form-group">
+        <label for="biografia">Biografia:</label>
+        <textarea id="biografia" name="biografia" [(ngModel)]="autor.biografia" rows="5"></textarea>
+      </div>
+  
+      <!-- Data de Nascimento -->
+      <div class="form-group">
+        <label for="dataNascimento">Data de Nascimento:</label>
+        <input type="date" id="dataNascimento" name="dataNascimento" [(ngModel)]="autor.dataNascimento">
+      </div>
+  
+      <!-- Botão de Envio -->
+      <div class="form-group">
+        <button type="submit">Salvar Autor</button>
+      </div>
+    </form>
+  </div>
+  

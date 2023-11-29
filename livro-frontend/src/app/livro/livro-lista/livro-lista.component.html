@@ -1,0 +1,17 @@
+<div class="livro-lista">
+    <h2>Lista de Livros</h2>
+  
+    <mat-list>
+      <mat-list-item *ngFor="let livro of Livros">
+        <div mat-list-avatar class="avatar"></div>
+        <div mat-line>{{ livro.nome }}</div>
+        <div mat-line>{{ livro.obrasPublicadas }} obras publicadas</div>
+        <div mat-line>
+          <button mat-icon-button (click)="verDetalhes(livro.id)">
+            <mat-icon>visibility</mat-icon>
+          </button>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  

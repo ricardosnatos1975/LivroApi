@@ -1,0 +1,9 @@
+<div *ngIf="assunto">
+  <h2>{{ assunto.titulo }}</h2>
+  <p>Descrião: {{ assunto.descricao }}</p>
+  <button (click)="editarassunto()">Editar</button>
+</div>
+
+<div *ngIf="!assunto">
+  <p>Nenhum assunto selecionado.</p>
+</div>

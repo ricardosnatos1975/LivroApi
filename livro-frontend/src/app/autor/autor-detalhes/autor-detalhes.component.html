@@ -1,0 +1,10 @@
+<div *ngIf="autor">
+  <h2>{{ autor.nome }}</h2>
+  <p>Data de Nascimento: {{ autor.dataNascimento }}</p>
+  <p>Biografia: {{ autor.biografia }}</p>
+  <button (click)="editarAutor()">Editar</button>
+</div>
+
+<div *ngIf="!autor">
+  <p>Nenhum autor selecionado.</p>
+</div>

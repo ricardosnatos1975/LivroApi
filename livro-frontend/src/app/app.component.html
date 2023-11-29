@@ -1,0 +1,120 @@
+<div class="layout-wrapper layout-compact">
+
+	<div class="layout-container menu-layout-overlay">
+		<!-- Top Bar -->
+		<div [class]="temInstituicaoSelecionada && instituicaoSelecionada.estouNoAcerto ? ' topbar clearfix dia-acerto' : ' topbar clearfix dia-normal' ">
+			<div class="topbar-left">
+				<div class="logo"></div>
+				<div class="ambiente">
+					<span class="" *ngIf="temInstituicaoSelecionada">
+						<h4>{{instituicaoSelecionada.ambiente}}</h4>
+					</span>
+				</div>
+				<div class="instituicao" (click)="abrirTelaInstituicao()">
+					<h4 *ngIf="temInstituicaoSelecionada">{{instituicaoSelecionada.nomeAbreviado}}</h4>
+				</div>
+			</div>
+			<div class="topbar-center">
+				<div class="logo-sistema centralizacao_logo_sistema">
+					<span class="logo_principal"></span>
+					<span class="divisoria"></span>
+					<span class="texto-sistema">Emissão</span>
+				</div>
+			</div>
+			<div class="topbar-right">
+
+				<!-- <a id="topbar-menu-button" href="#"> <i class="material-icons">menu</i>
+				</a> -->
+
+				<ul class="topbar-items fadeInDown animated">
+					<li class="user-item {{ classUser }}" role="menuitem">
+						<a href="#">
+							<i class="topbar-icon material-icons">person</i>
+							<span class="topbar-item-name">Perfil</span>
+						</a>
+						<ul class="ultima-menu animated">
+							<li role="menuitem">
+								<usuario-info-login #usuarioinfo [usuario]="usuario"></usuario-info-login>
+								<a href="#" (click)="logout()"> 
+									<i class="material-icons">power_settings_new</i> <span>Sair</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="profile-item" role="menuitem">
+						<a href="#"> <i class="topbar-icon material-icons">settings</i>
+							<span class="topbar-item-name">Administrador</span>
+						</a>
+						<ul class="ultima-menu animated">
+							<li role="menuitem">
+								<a href="#/sobre?abrirTela=true&sistema=emissao-app" > <i class="material-icons">details</i> <span>Sobre</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="data-sistema"  (click)="abrirTelaData()">
+					<span class="dia-sistema" *ngIf="temInstituicaoSelecionada">{{diaSelecionado}}</span>
+					<span class="mes-sistema" *ngIf="temInstituicaoSelecionada">{{mesSelecionado}}</span>
+					<span class="ano-sistema" *ngIf="temInstituicaoSelecionada">{{dataSelecionada.getFullYear()}}</span>
+					<span class="semana-sistema" *ngIf="temInstituicaoSelecionada">{{dataSelecionada.toLocaleString('pt-br', {  weekday: 'short' })}}</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Menu -->
+		<div [hidden]="!isAuthenticated()" class="seta-menu">
+			<a id="menu-button" href="#"> <i></i>
+			</a>
+		</div>
+		<div  class="layout-menu">
+
+			<div class="nano">
+				<div class="nano-content menu-scroll-content">
+					<div class="profile" [hidden]="profileMode!='inline'||layoutMode=='horizontal'">
+						<div class="profile-image"></div>
+						<a id="profile-options" href="#"> <span class="profile-name">Jane
+								Williams</span> <i class="material-icons">keyboard_arrow_down</i>
+						</a>
+					</div>
+
+					<ul id="profile-menu" class="ultima-menu" [hidden]="profileMode!='inline'">
+						<li role="menuitem">
+							<a href="#" class="ripplelink"> <i class="material-icons">person</i> <span>Profile</span>
+							</a>
+						</li>
+						<li role="menuitem">
+							<a href="#" class="ripplelink"> <i class="material-icons">security</i> <span>Privacy</span>
+							</a>
+						</li>
+						<li role="menuitem">
+							<a href="#" class="ripplelink"> <i class="material-icons">settings_application</i> <span>Settings</span>
+							</a>
+						</li>
+						<li role="menuitem">
+							<a href="#" (click)="logout()" class="ripplelink"> <i class="material-icons">power_settings_new</i> <span>Logout</span>
+							</a>
+						</li>
+					</ul>
+					<core-menu></core-menu>
+				</div>
+			</div>
+		</div>
+
+		<div class="layout-main">
+		
+			<core-global-messages></core-global-messages>
+			<core-messages-log></core-messages-log>
+			<div class="ui-g ui-fluid main-box">
+				<div  class="ui-g-12 ui-lg-12">
+					<core-breadcrumb></core-breadcrumb>
+				</div>
+				<router-outlet></router-outlet>
+			</div>
+
+
+
+		</div>
+	</div>
+
+</div>

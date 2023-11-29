@@ -1,0 +1,17 @@
+<div class="assunto-lista">
+    <h2>Lista de assuntoes</h2>
+  
+    <mat-list>
+      <mat-list-item *ngFor="let assunto of assuntoes">
+        <div mat-list-avatar class="avatar"></div>
+        <div mat-line>{{ assunto.idAssnto }}</div>
+        <div mat-line>{{ assunto.detalhes }} </div>
+        <div mat-line>
+          <button mat-icon-button (click)="verDetalhes(assunto.idAssunto)">
+            <mat-icon>visibility</mat-icon>
+          </button>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  

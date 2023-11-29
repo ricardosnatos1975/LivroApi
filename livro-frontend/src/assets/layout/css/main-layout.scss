@@ -1,0 +1,24 @@
+@import '../../../../node_modules/frontend-components/lib/components/assets/layout/css/layout-tema';
+
+$primaryColor: #00519f; /*Textos, botões, links, border dropdown, background busca dropdown, segunda opção no botão sim/não*/
+$primaryDarkColor: #0b66b1; /*background hover, hover botões, rodapé datatable, background topbar*/
+$primaryLightColor: #BBDEFB; /*background submenus, linhas datatable*/
+$primaryTextColor: #FFFFFF;
+
+$accentColor: #58656B; /*item selecionado dropdown, seta menu, balões nos itens da topbar, default botão sim/não*/
+$accentDarkColor: #D32F2F;
+$accentLightColor: #FFCDD2;
+$accentTextColor: #FFFFFF;
+
+$darkMenuBgColor: #212121;
+$darkMenuHoverColor: #EEEEEE;
+
+$logo:"../images/logo-scm.png";
+$largura-logo: 180px;
+$altura-logo: 40px;
+$backgroundOpcional: #E1E1E3;
+$largura-logo-login: 200px;
+$altura-logo-login: 50px;
+
+$c-lineHeight: 10px;
+$c-fontSize: 12px;

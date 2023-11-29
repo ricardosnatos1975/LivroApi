@@ -1,0 +1,38 @@
+.livro-form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .livro-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .livro-form input,
+  .livro-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+  }
+  
+  .livro-form button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .livro-form button:hover {
+    background-color: #45a049;
+  }
+  
+  .livro-form .error-message {
+    color: #ff0000;
+    margin-top: 8px;
+  }
+  

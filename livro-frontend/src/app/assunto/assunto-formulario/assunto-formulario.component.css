@@ -1,0 +1,38 @@
+.assunto-form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .assunto-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .assunto-form input,
+  .assunto-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+  }
+  
+  .assunto-form button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .assunto-form button:hover {
+    background-color: #45a049;
+  }
+  
+  .assunto-form .error-message {
+    color: #ff0000;
+    margin-top: 8px;
+  }
+  

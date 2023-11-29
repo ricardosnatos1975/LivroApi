@@ -1,0 +1,22 @@
+[
+	{
+		"id": "home",
+		"name": "Início",
+		"route": "/home",
+		"funcionalities": [],
+		"materialIcon": "home"
+	},
+	{
+		"id": "livro",
+		"name": "Livro",
+		"subMenus": [
+			{
+				"id": "livro",
+				"name": "Livro",
+				"funcionalities": ["EMI001"],
+				"favorito": true,
+				"route": "/livro/livro"
+			}
+		]
+	}
+]

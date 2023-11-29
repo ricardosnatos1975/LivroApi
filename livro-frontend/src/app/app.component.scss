@@ -1,0 +1,46 @@
+.topbar .topbar-center .logo-sistema .texto-sistema {
+  font-size: 23px;
+  display: inline-block;
+  padding-left: 10px;
+  color: #1874CD;
+  position: absolute;
+  margin-top: 15px;
+
+}
+.topbar .topbar-center .logo-sistema .divisoria {
+  border: 1px solid #1874CD;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: rgb(24, 116, 205);
+  display: inline-block;
+  height: 36px;
+  border-bottom: 0;
+}
+.layout-container .topbar .logo {
+display: inline-block;
+width: 135.5px;
+height: 36px;
+background-size: auto auto;
+background-size: 125.5px 45px;
+margin-left: -5px;
+}
+.ambiente {
+width: 60%;
+position: absolute;
+top: -5PX;
+font-size: 16px;
+left: 295px;
+}
+.logo_principal{
+background:url("../assets/layout/images/logo-bank-pro.png") top left no-repeat;
+width: 148px;
+height: 38px;
+background-size: 150px 40px;
+margin-left: 5px;
+padding-right: 10px;
+display: inline-block;
+}
+
+.centralizacao_logo_sistema{
+  width: 40%;
+}

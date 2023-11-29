@@ -1,0 +1,234 @@
+$cor-primaria: #00519f;
+
+@mixin abs-lt($left, $top){
+    position: absolute;
+    left: $left;
+    top: $top;
+}
+@mixin abs-lb($left, $bottom){
+    position: absolute;
+    left: $left;
+    bottom: $bottom;
+}
+@mixin abs-rt($right, $top){
+    position: absolute;
+    right: $right;
+    top: $top;
+}
+@mixin abs-rb($right, $bottom){
+    position: absolute;
+    right: $right;
+    bottom: $bottom;
+}
+@mixin circulo($width){
+    width: $width;
+    height: $width;
+    border-radius: 50%;
+}
+@mixin margem-padrao($top:10px, $right:10px, $bottom:10px, $left:10px){
+    margin: $top $right $bottom $left;
+}
+@mixin clear($tipo){
+    @if $tipo == left {
+        clear: left !important;
+    }@else if $tipo == right {
+        clear: right !important;
+    }@else if $tipo == both{
+        clear: both !important;
+    }
+}
+@mixin tamanho-datatable($tamanho:300px){
+    min-height: $tamanho;
+    max-height: $tamanho;
+}
+@mixin dialog-personalizada-top($classe, $top, $width){
+    .#{$classe}{
+        top: $top !important;
+        width: $width;
+    } 
+}
+@mixin campo-padrao(){
+    @include margem-padrao($top: 5px);
+    height: 35px !important;
+
+    .md-inputfield{
+        label{
+            left: 0;
+            color: $cor-primaria;
+        }
+        .ui-inputtext{
+            padding-left: 0;
+            color: #000;
+        }
+        .ui-dropdown-label{
+			position: relative;
+			color: #000;
+        }
+        .ui-dropdown{
+            height: 18px;
+        }
+    }
+}
+@mixin campo-padrao-data(){
+    .ui-fluid .ui-calendar.ui-calendar-w-btn .ui-inputtext{ width: 100%; }
+}
+@mixin campo-busca-avancada(){
+    .busca-avancada{
+    }
+}
+@mixin campo-busca-avancada-personalizada($classe, $tamanho){
+    .#{$classe}{
+        .busca-avancada{
+            .ui-inputtext{
+                width: $tamanho !important;
+            }
+        }
+    }
+}
+@mixin multiselect($classe, $tamanho){
+    .multiselect .#{$classe}.ui-multiselect{
+        width: $tamanho;
+    }
+}
+
+@mixin campo-dropdown($campo-class, $height:18px){
+    @if $campo-class == campo-grupo-papel{
+        .#{$campo-class} .ui-dropdown{ width: 155px !important; height: $height; }
+    }@else if $campo-class == motivo-bloqueio{
+        .#{$campo-class} .ui-dropdown{ width: 275px !important; height: $height; }
+    }@else if $campo-class == tipo-operacao{
+        .#{$campo-class} .ui-dropdown{ width: 217px !important; height: $height; }
+    }@else if $campo-class == tipo-posicao-base{
+        .#{$campo-class} .ui-dropdown{ width: 150px !important; height: $height; }
+    }@else if $campo-class == tipo-cliente{
+        .#{$campo-class} .ui-dropdown{ width: 144px !important; height: $height; }
+    }@else if $campo-class == liquidacao{
+        .#{$campo-class} .ui-dropdown{ width: 130px !important; height: $height; }
+    }@else if $campo-class == operador{
+        .#{$campo-class} .ui-dropdown{ width: 130px !important; height: $height; }
+    }@else if $campo-class == tipo-pessoa{
+        .#{$campo-class} .ui-dropdown{ width: 115px !important; height: $height; }
+    }@else if $campo-class == grupo-cliente{
+        .#{$campo-class} .ui-dropdown{ width: 99px !important; height: $height; }
+    }@else if $campo-class == categoria{
+        .#{$campo-class} .ui-dropdown{ width: 90px !important; height: $height; }
+    }@else if $campo-class == tipo-titulo{
+        .#{$campo-class} .ui-dropdown{ width: 90px !important; height: $height; }
+    }@else if $campo-class == clearings{
+        .#{$campo-class} .ui-dropdown{ width: 75px !important; height: $height; }
+    }@else if $campo-class == posicao-estoque{
+        .#{$campo-class} .ui-dropdown{ width: 75px !important; height: $height; }
+    }@else if $campo-class == clearing{
+        .#{$campo-class} .ui-dropdown{ width: 75px !important; height: $height; }
+    }@else if $campo-class == colunas{
+        .#{$campo-class} .ui-dropdown{ width: 72px !important; height: $height; }
+    }@else if $campo-class == colunas-filtros{
+        .#{$campo-class} .ui-dropdown{ width: 215px !important; height: $height; }
+    }@else if $campo-class == campo-evento-contabil{
+        .#{$campo-class} .ui-dropdown{ width: 555px !important; height: $height; }
+    }@else if $campo-class == campo-papel{
+        .#{$campo-class} .ui-dropdown{ width: 100px !important; height: $height; }
+    }@else if $campo-class == tipo-evento{
+        .#{$campo-class} .ui-dropdown{ width: 125px !important; height: $height; }
+    }@else if $campo-class == crud-campo-atividade{
+        .#{$campo-class} .ui-dropdown{ width: 222px !important; height: $height; }
+    }@else if $campo-class == crud-bloqueio-custodia-selic{
+        .#{$campo-class} .ui-dropdown{ width: 175px !important; height: $height; }
+    }@else if $campo-class == crud-sistema-cetip{
+        .#{$campo-class} .ui-dropdown{ width: 200px !important; height: $height; }
+    }@else if $campo-class == crud-grupo-evento-financeiro{
+        .#{$campo-class} .ui-dropdown{ width: 200px !important; height: $height; }
+    }@else if $campo-class == tipo-remuneracao-definitiva{
+        .#{$campo-class} .ui-dropdown{ width: 90px !important; height: $height; }
+    }@else if $campo-class == tipo-taxa{
+        .#{$campo-class} .ui-dropdown{ width: 90px !important; height: $height; }
+    }@else if $campo-class == campo-carteira{
+        .#{$campo-class} .ui-dropdown{ width: 75px !important; height: $height; }
+    }@else if $campo-class == campo-carteira-baseleia{
+        .#{$campo-class} .ui-dropdown{ width: 130px !important; height: $height; }
+    }
+}
+@mixin campo-dropdown-personalizado($campo-class, $tamanho, $height: 18px){
+    .#{$campo-class} .ui-dropdown{ width: $tamanho !important; height: $height; }
+}
+@mixin subtitulo(){
+    h2{
+		font-size: 16px;
+		@include margem-padrao(5px, 0, 0, 0);
+	}
+}
+@mixin datatable-dialog(){
+    .ui-dialog{
+        legend{
+            & ~ div{
+                &.ui-fieldset-content-wrapper{
+                    height: auto !important;
+                }
+            }
+        }
+    }
+}
+@mixin altura-personalizada-datatable($classe, $altura-maxima){
+    .#{$classe} .ui-datatable{
+        max-height: $altura-maxima !important;
+    }
+}
+@mixin campo-texto($size){
+    @if $size == tamanho-normal{
+        .#{$size} .ui-inputtext{width: 110px !important;}
+    }@else if $size == tamanho-medio{
+        .#{$size} .ui-inputtext{width: 220px !important;}
+    }@else if $size == tamanho-grande{
+        .#{$size} .ui-inputtext{width: 330px !important;}
+    }
+}
+@mixin campo-texto-personalizado($campo, $tamanho){
+    .#{$campo} .ui-inputtext{
+        width: $tamanho !important;
+    }
+}
+@mixin sem-borda($borda){
+    @if $borda == top{
+        border-top: none !important;
+    }@else if $borda == right{
+        border-right: none !important;
+    }@else if $borda == bottom{
+        border-bottom: none !important;
+    }@else if $borda == left{
+        border-left: none !important;
+    }@else if $borda == todas{
+        border: none !important;
+    }
+}
+
+
+@mixin botao($estilo, $width: auto){
+    @if $estilo == padrao{
+        button.ui-button{
+            background-color: #00519f;
+            color: #FFFFFF;
+            box-shadow: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            width: $width;
+
+            .fa{
+                color: #fff;
+            }
+        }
+    }@else if $estilo == invertido{
+        button.ui-button{
+            background-color: #fff;
+            color: #00519f;
+            box-shadow: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            width: $width;
+
+            .fa{
+                color: #00519f;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,29 @@
+<div class="livro-form">
+    <h2>Formulário de livro</h2>
+    
+    <form (ngSubmit)="submitForm()">
+      <!-- Nome do livro -->
+      <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" [(ngModel)]="livro.nome" required>
+      </div>
+  
+      <!-- Titulo -->
+      <div class="form-group">
+        <label for="titulo">Titulo:</label>
+        <textarea id="titulo" name="titulo" [(ngModel)]="livro.titulo" rows="5"></textarea>
+      </div>
+  
+      <!-- Data Publicacao -->
+      <div class="form-group">
+        <label for="dataPublicacao">Data de Nascimento:</label>
+        <input type="date" id="dataPublicacao" name="dataPublicacao" [(ngModel)]="livro.dataPublicacao">
+      </div>
+  
+      <!-- Botão de Envio -->
+      <div class="form-group">
+        <button type="submit">Salvar livro</button>
+      </div>
+    </form>
+  </div>
+  

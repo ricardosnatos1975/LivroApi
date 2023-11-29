@@ -1,0 +1,17 @@
+<div class="autor-lista">
+    <h2>Lista de Autores</h2>
+  
+    <mat-list>
+      <mat-list-item *ngFor="let autor of autores">
+        <div mat-list-avatar class="avatar"></div>
+        <div mat-line>{{ autor.nome }}</div>
+        <div mat-line>{{ autor.obrasPublicadas }} obras publicadas</div>
+        <div mat-line>
+          <button mat-icon-button (click)="verDetalhes(autor.id)">
+            <mat-icon>visibility</mat-icon>
+          </button>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  

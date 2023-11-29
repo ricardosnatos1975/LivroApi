@@ -1,0 +1,500 @@
+/* You can add global styles to this file, and also import other style files */
+@import '_mixins';
+
+app-boleta,
+app-receber-lastro,
+app-efetivar-rc,
+app-busca-avancada,
+app-home{
+	width: 100%;
+}
+ope-boleta,
+ope-gerenciador-boleta,
+ope-operacao,
+ope-gerenciador-operacao{
+	position: inherit !important;
+}
+body{
+	@include campo-padrao-data();
+	@include campo-busca-avancada();
+	@include campo-busca-avancada-personalizada(busca-avancada-custodia, 140px);
+	@include campo-busca-avancada-personalizada(pesquisa-custodia, 140px);
+
+	@include campo-dropdown(campo-grupo-papel);
+	@include campo-dropdown(tipo-posicao-base);
+	@include campo-dropdown(categoria);
+	@include campo-dropdown(clearings);
+	@include campo-dropdown(clearing);
+	@include campo-dropdown(tipo-cliente);
+	@include campo-dropdown(tipo-titulo);
+	@include campo-dropdown(posicao-estoque);
+	@include campo-dropdown(liquidacao);
+	@include campo-dropdown(grupo-cliente);
+	@include campo-dropdown(tipo-operacao);
+	@include campo-dropdown(tipo-pessoa);
+	@include campo-dropdown(motivo-bloqueio);
+	@include campo-dropdown(colunas);
+	@include campo-dropdown(operador);
+	@include campo-dropdown(colunas-filtros);
+	@include campo-dropdown(campo-evento-contabil);
+	@include campo-dropdown(campo-papel);
+	@include campo-dropdown(tipo-evento);
+	@include campo-dropdown(crud-campo-atividade);
+	@include campo-dropdown(crud-bloqueio-custodia-selic);
+	@include campo-dropdown(crud-sistema-cetip);
+	@include campo-dropdown(crud-grupo-evento-financeiro);
+	@include campo-dropdown(tipo-remuneracao-definitiva);
+	@include campo-dropdown(tipo-taxa);
+	@include campo-dropdown(campo-carteira);
+	@include campo-dropdown(campo-carteira-baseleia);
+	@include campo-dropdown(modulos-filtros);
+
+	@include multiselect(tipoOperacao, 100px);
+
+	@include campo-texto(tamanho-normal);
+	@include campo-texto(tamanho-medio);
+	@include campo-texto(tamanho-grande);
+	@include campo-texto-personalizado(nome-filtro, 350px);
+	@include campo-texto-personalizado(nome-cliente, 250px);
+	@include campo-texto-personalizado(codigo-custodia, 150px);
+	@include campo-texto-personalizado(valor, 350px);
+	@include campo-texto-personalizado(crud-campo-nome, 280px);
+	@include campo-texto-personalizado(crud-campo-operacao, 236px);
+	@include campo-texto-personalizado(selic-cliente, 260px);
+	@include campo-texto-personalizado(papel, 80px);
+	@include campo-texto-personalizado(emissor, 350px);
+	@include campo-texto-personalizado(campo-ano, 45px);
+
+	@include subtitulo();
+
+	@include datatable-dialog();
+	
+	@include dialog-personalizada-top(dialog-instituicoes, 52px, 250px);
+
+	@include altura-personalizada-datatable(grid_lastro, 145px);
+
+	h2{
+		font-size: 16px;
+		margin: 5px 0 0 0;
+	}
+	.mat-sidenav{
+		background-color: #fff;
+	}
+	.ui-fluid{
+		.ui-contextmenu{
+			width: auto;
+
+			.ui-menu-list li.ui-menuitem .ui-menuitem-link .ui-menuitem-icon{
+				color: #00519f;
+			}
+		}
+	}
+	.ui-toolbar{
+		.ui-toolbar-group-right button{
+			margin: -5px 0 0;
+		}
+		p-splitbutton{
+			display: block;
+			margin: -5px 0;
+		}
+	}
+	.pesquisa-content > div{
+		height: 40px;
+		
+		&.c-switch{
+			height: 23px !important;
+		}
+	}
+	.ui-spinner{
+		.ui-spinner-up,
+		.ui-spinner-down{
+			.fa{
+				color:#00519f;
+			}
+		}
+		.ui-spinner-button{
+			.fa{
+				left: 5px !important;
+				top: 5px;
+				color: #00519f;
+			}
+			
+		}
+	}
+	.ui-state-active, 
+	.ui-state-highlightbody .ui-state-active, 
+	.ui-breadcrumb ul li{
+		background-color: transparent !important;
+
+		.fa{
+			color: #00519f !important;
+		}
+	}
+	.ui-breadcrumb{
+		background-color: transparent !important;
+		border: none !important;
+
+		ul{
+			li{
+				color: #00519f !important;
+				a{
+					color: #00519f !important;
+					background-color: transparent !important;
+				}
+			}
+		}
+	}
+
+	.ui-dialog .ui-dialog-titlebar-icon .fa {
+		display: block !important;
+	}
+}
+.card{
+	&, .titulo-card{
+		padding: 5px 5px 0;
+		// padding-bottom: 10px;
+	}
+	&.card-cliente,
+	&.card-instituicao-financeira,
+	&.card-titulo,
+	&.card-operacao,
+	&.card-aplicacao,
+	&.card-mensageria{
+		.pull-left{
+			height: 45px;
+		}
+	}
+}
+body{
+	.md-inputfield{
+		.ui-dropdown-label{
+			position: relative;
+			color: #000;
+		}
+		label{
+			color: #00519f;
+		}
+		.ui-inputtext{
+			color: #000;
+		}
+	}
+
+	
+	
+}
+.instituicao{
+	height: 32px;
+	font-size: 26px;
+	position: absolute;
+	left: 129px;
+	top: -3px;
+	padding-left: 17px;
+	h4{
+		margin: 0;
+		line-height: 50px;
+		cursor: pointer;
+		font-weight: normal;
+	}
+}
+.elementos-footer-pesquisa,
+.boleta-datatable{
+	clear: both;
+}
+
+body .ui-dialog .ui-dialog-content {
+	height: auto !important;
+	max-height: 550px !important;
+}
+
+body .ui-dialog .ui-dialog-footer {
+    border: 0 !important;
+}
+
+body .ui-dialog .ui-dialog-buttonpane {
+    border: 0 !important;
+}
+
+.c-switch{
+	color: #999;
+	font-size: 13px;
+	margin-left: 25px;
+	margin-top: 2px;
+	
+	label{
+		margin-right: 20px;
+	}
+}
+
+div.ui-panel{
+	height: 100%;
+}
+.pull-left{
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.pull-right{
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	height: 35px;
+}
+.footer{
+	clear: both;
+	
+	.ui-dialog-buttonpane{
+		border: none;
+		padding: 10px;
+	}
+}
+p-datatable{
+	display: block;
+	margin-bottom: 20px;
+	clear: both;
+}
+.dialog-open{
+	.ui-dialog-content{
+		max-height: 500px !important;
+		overflow-y: auto;
+	}
+	&-bloco{
+		height: 40px;
+		margin-top: 10px;	
+	}
+	.ui-dialog-buttonpane{
+		clear: both;
+	}
+}
+
+.ui-button-icon-only{
+	margin-top: 5px;
+}
+.resgatar-compromissada{
+	.margin-bottom{
+		margin-bottom: 10px;
+	}
+}
+.ui-datatable{
+	.ui-datatable-header{
+		.ui-button{
+			background-color: #fff;
+			color: #00519f;
+			.fa {
+				color: #00519f;
+			}
+		}
+	}
+	.ui-datatable-scrollable-header-box{
+		padding-right: 17px;
+		background: #00519f;
+		margin-right: 0 !important
+	}
+	.ui-sortable-column-icon{
+		&.fa-sort{
+			display: inline-block;
+		}
+		&.fa-sort-desc,
+		&.fa-sort-asc{
+			display: inline-block;
+		}
+	}
+	.ui-datatable-data{
+		&>tr{
+			&>td{
+				border: none;
+			}
+		}
+	}
+	.ui-paginator .ui-paginator-pages a.ui-state-active{
+		background-color: #58656B !important;
+	}
+}
+	
+body{
+	.ui-fieldset{
+		.ui-fieldset-legend{
+			span.ui-fieldset-toggler{
+				margin-left: .5em;
+				font-size: 10px;
+			}
+			margin-bottom: 10px;
+			font-weight: normal;
+		}
+		margin-bottom: 25px;
+	}
+}
+
+body .dialog-busca.ui-dialog .ui-fieldset {
+	margin-bottom: 25px;
+}
+
+@media (max-width: 1024px){
+	.botoes-pesquisa{
+		padding-left: 0;
+	}
+
+	.ui-lg-12 {
+		padding: .5em;
+	}
+}
+
+.ui-radiobutton-icon.fa.fa-circle {
+	width: 14px;
+    height: 14px;
+}
+
+body .ui-radiobutton .ui-radiobutton-box .fa-circle {
+	margin: 0px;
+}
+
+body .ui-state-active, body .ui-state-highlight {
+    background-color: #00519f !important;
+    color: #FFFFFF !important;
+}
+
+body .ui-radiobutton .ui-radiobutton-box.ui-state-active {
+	background-color: #FFFFFF !important;
+    color: #00519f !important;
+}
+
+body .ui-datatable tbody tr.ui-state-highlight td.ui-selection-column .ui-chkbox-box .ui-chkbox-icon {
+    color: #00519f !important;
+}
+
+body .ui-chkbox .ui-chkbox-box .ui-chkbox-icon {
+    margin-top: 0px !important;
+}
+
+.ui-dropdown-panel {
+	z-index: 9000 !important;
+}
+
+.ui-dropdown-panel .ui-dropdown-items-wrapper {
+	max-height: 150px !important;
+}
+
+/deep/ body .ui-dialog.dialog-overflow-visible .ui-dialog-content {
+    overflow: visible !important;
+}
+
+/deep/ body .ui-dialog.dialog-rolagem .ui-dialog-content {
+    max-height: 95% !important;
+}
+
+body .ui-datatable .ui-paginator-top {
+	height: 30px;
+	width: 100% !important;
+	padding: 0.3em 0.625em !important;
+	background: #00519f;
+    border-top: 1px solid white;
+}
+
+div .treeContainer {
+	width:320px !important;
+}
+
+.ui-multiselect.ui-widget.ui-state-default.ui-corner-all {
+	height:25px !important;
+}
+
+body{
+	div.dialog-sobre {
+
+		width: 88% !important;
+
+		.sobre-aplicacao-column{ width: 95px; }
+		.sobre-versao-column{ width: 107px; }
+		.sobre-compilacao-column{ width: 75px}
+		.sobre-data-column{ width: 112px; }
+		.sobre-bd-column{ width: 450px;}
+
+		fieldset{
+			height: 150px !important;
+		}
+	} 
+}
+
+body .ui-multiselect{
+	border-bottom: none !important;
+}
+
+body .checkbox-padrao .ui-state-active {
+	background-color: #00519f!important;
+}
+
+body .checkbox-padrao .ui-chkbox .ui-chkbox-box .ui-chkbox-icon {
+	font-size: 1.65em;
+    margin-left: -4px;
+    margin-top: -5px !important;
+}
+
+body .botao-fechar-modal-detalhes {
+	margin-left: 9px !important;
+}
+
+body .ui-datepicker-current-day a span{
+	color: #ffffff !important;
+}
+
+body .layout-processos .ui-dialog-content .ui-tabview.ui-tabview-left > .ui-tabview-nav li.ui-state-active{
+	background: #87CEEB !important;
+    border: 0 !important;
+    border-radius: 5px !important;
+}
+
+efetivar-conglomerado{
+	width: 100% !important;
+}
+
+body core-adv-search .button-search .ui-button {
+	top: -18px !important;
+	background-color: green;
+}
+
+.ui-fluid .ui-calendar.ui-calendar-w-btn .ui-inputtext {
+    width: 100%;
+}
+
+.ui-datatable .ui-datatable-tablewrapper .ui-datatable-thead tr th {
+	text-align: center !important;
+
+}
+
+.ui-state-highlight .ui-chkbox .ui-chkbox-icon, .ui-chkbox.ui-state-active .ui-chkbox-icon, body .ui-state-active .fa {
+	color: white !important;
+}
+
+.ui-datatable .ui-chkbox .ui-chkbox-box {
+    width: 14px !important;
+    height: 14px !important;
+}
+
+.ui-datatable .ui-datatable-thead tr th .ui-chkbox .ui-chkbox-box {
+    width: 10px !important;
+    height: 10px !important;
+}
+
+.ui-datatable p-header {
+	border-bottom: 0 none !important;
+}
+
+.ui-datatable .ui-datatable-header .multiselect {
+    text-align: right;
+    width: 0px !important;
+    float: right;
+    height: 29px;
+	border-bottom: none;
+}
+
+.ui-dialog.dialog-busca .ui-dialog-content .clear-all .ui-datatable .ui-datatable-scrollable-body {
+	overflow-y: auto !important;
+	border-right: 1px solid #00519f;
+}
+
+.dialog-crud .ui-dialog-footer .card-botoes .pull-left{
+	padding-bottom: 20px;
+}
+
+div.dashboard-data p-accordiontab:nth-child(1) div.ui-accordion-header{
+	background-color: green!important;
+} 
